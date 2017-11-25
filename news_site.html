@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lingren Assignment 1</title>
+    <link rel="stylesheet" href="css/lib/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">    
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="js/lib/jquery.min.js"></script>
+    <script src="js/lib/materialize.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+
+    <div class="row">
+        <nav>
+            <div class="nav-wrapper">
+                    <a href="#" data-activates="nav-panel" class="button-collapse left"><i class="material-icons">menu</i></a>
+                <a class="brand-logo center" href="#">Lingren News</a>
+                <div class="right input-field">
+                    <label for="search" class="label-icon search-icon"><i class="material-icons">search</i></label>
+                    <input id="search" type="search" />
+                    <i class="material-icons cancel-search">clear</i>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="row">
+        <div class="side-nav fixed" id="nav-panel">
+            <ul>
+                <li class="waves-effect nav-section-link active"><a href="#popular"><i class="material-icons">stars</i>Popular</a></li>
+                <li class="waves-effect nav-section-link"><a href="#world"><i class="material-icons">public</i>World</a></li>
+                <li class="waves-effect nav-section-link"><a href="#business"><i class="material-icons">domain</i>Business</a></li>
+                <li class="waves-effect nav-section-link"><a href="#technology"><i class="material-icons">memory</i>Technology</a></li>
+                <li class="waves-effect nav-section-link"><a href="#science"><i class="material-icons">school</i>Science</a></li>
+                <li class="waves-effect nav-section-link"><a href="#entertainment"><i class="material-icons">theaters</i>Entertainment</a></li>
+            </ul>
+        </div>
+
+        <div class="col s12" id="main-panel">
+            <!-- main feed -->
+            <div class="container">
+                <main class="feed-panel" id="popular"></main>
+                <main class="feed-panel" id="world"></main>
+                <main class="feed-panel" id="business"></main>
+                <main class="feed-panel" id="technology"></main>
+                <main class="feed-panel" id="science"></main>
+                <main class="feed-panel" id="entertainment"></main>
+
+                <main class="feed-panel" id="search-results"></main>
+
+                <!-- article template/placeholder -->
+                <main class="article-panel" style="display:none">
+                    <h3 class="article-title">Article.title</h3>
+                    <div class="article-media"> <img /> </div>
+                    <span class="article-author"></span><span class="article-date"></span>
+                    <div class="article-body"></div>
+                    <a class="article-permalink">View full article on time.com</a>
+                </main>
+
+                <main id="404" style="display:none">
+                    <div class="row">
+                        <div class="col s12">
+                            <h3>404 - Page not found</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12">
+                            <p>The content you were trying to find could not be found. <a id="404-back">Let's go back!</a></p>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
