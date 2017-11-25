@@ -205,7 +205,7 @@ function checkSearch() {
     let query = $('#search').val();
     if (query !== '') {
         query = query.toLowerCase();
-        route('#search?q=' + query);
+        window.location.assign('#search?q=' + query);
     }
 }
 
