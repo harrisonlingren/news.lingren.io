@@ -218,7 +218,7 @@ $(document).ready(() => {
 
     // router listener
     $(window).on('hashchange', () => {
-        new_loc = window.location.hash;
+        let new_loc = window.location.hash;
         route(new_loc);
     });
 
@@ -236,8 +236,6 @@ $(document).ready(() => {
     $('.nav-section-link').click((e) => {
         $('.nav-section-link').removeClass('active');
         $(e.currentTarget).addClass('active');
-
-        console.log(e);
     });
 
 });
