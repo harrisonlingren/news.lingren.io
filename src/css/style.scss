@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css?family=Lora:400,700');
+
+main {
+    padding-left: 300px;
+}
+
+.side-nav {
+    top: 64px;
+    z-index: 998;
+
+    .nav-section-link {
+        width: 100%;
+        
+        a[href="#popular"] {
+            &:hover, &.active { 
+                color: #2196F3;
+                background-color: rgba(187,222,251,0.5);
+            }
+        }
+
+        a[href="#business"] {
+            &:hover, &.active { 
+                color: #F44336;
+                background-color: rgba(255,205,210,0.5);
+            }
+        }
+    
+        a[href="#technology"] {
+            &:hover, &.active {
+                color: #607D8B;
+                background-color: rgba(207,216,220,0.5);
+            }
+        }
+    
+        a[href="#science"] {
+            &:hover, &.active {
+                color: #009688;
+                background-color: rgba(178,223,219,0.5);
+            }
+        }
+    
+        a[href="#entertainment"] {
+            &:hover, &.active {
+                color: #FF5722;
+                background-color: rgba(255,204,188,0.5);
+            }
+        }
+    
+        a[href="#world"] {
+            &:hover, &.active {
+                color: #8BC34A;
+                background-color: rgba(220,237,200,0.5);
+            }
+        }
+    }
+}
+
+nav {
+    z-index: 999;
+    position: fixed;
+    background-color: #2196F3;
+
+    .brand-logo {
+        font-family: 'Lora', serif;        
+    }
+
+    // change color based on section
+    &.business { background-color: #F44336 !important; }
+    &.technology { background-color: #607D8B !important; }
+    &.science { background-color: #009688 !important; }
+    &.entertainment { background-color: #FF5722 !important; }
+    &.world { background-color: #8BC34A !important; }
+    &.popular { background-color: #2196F3 !important; }
+
+    i.material-icons.search-btn {
+        cursor: pointer;
+        margin-right: 12px;
+    }
+    
+    #search {
+        top: 12px;
+        position: relative;
+        padding: 10px;
+        margin: 0;
+        width: 152px;
+        margin-right: 12px;
+
+        box-shadow: none;
+        border-bottom: none;
+        -webkit-box-shadow: none;
+
+        &::placeholder {
+            color: rgba(255,255,255,0.87);
+        }
+    }
+}
+
+.container {
+    max-width: 1500px;
+}
+
+.feed-panel, .article-panel {
+    margin-top: 64px;
+}
+
+.feed-panel {
+    .card {
+        .card-image-overflow {
+            overflow: hidden;
+            width: 150px;
+            margin: 24px 16px;
+            margin-bottom: 0;
+        
+            img {
+                height: 150px;
+                margin-left: -50px;
+            }
+        }
+        
+        .card-title {
+            p { 
+                font-weight: 400; 
+                padding: 0 12px
+            }
+        }
+        
+        .card-content {
+            padding: 12px 24px 24px 24px;
+        }
+    
+        // for changing color based on section
+        .card-action {
+            a {
+                color: #2196F3 !important;
+                &:hover { color: #BBDEFB !important; }
+    
+                &.business {
+                    color: #F44336 !important;
+                    &:hover { color: #FFCDD2 !important; }
+                }
+            
+                &.technology {
+                    color: #607D8B !important;
+                    &:hover { color: #CFD8DC !important; }
+                }
+            
+                &.science {
+                    color: #009688 !important;
+                    &:hover { color: #B2DFDB !important; }
+                }
+            
+                &.entertainment {
+                    color: #FF5722 !important;
+                    &:hover { color: #FFCCBC !important; }
+                }
+            
+                &.world {
+                    color: #8BC34A !important;
+                    &:hover { color: #DCEDC8 !important; }
+                }
+            
+                &.popular {
+                    color: #2196F3 !important;
+                    &:hover { color: #BBDEFB !important; }
+                }
+            }        
+        }
+    }
+}
+
+.article-panel {
+    .article-author, .article-date {
+        display: block;
+    }
+    
+    .article-author {
+        font-size: large;
+        font-weight: 600;
+    }
+    
+    .article-body {
+        h2 {
+            font-size: 2.28rem;
+            line-height: 110%;
+            margin: 1.14rem 0 .912rem 0;
+        }
+    
+        // for switching colors based on section
+        a {
+            font-weight: 500;
+            &.business {
+                color: #F44336 !important;
+                &:hover { color: #FFCDD2 !important; }
+            }
+        
+            &.technology {
+                color: #607D8B !important;
+                &:hover { color: #CFD8DC !important; }
+            }
+        
+            &.science {
+                color: #009688 !important;
+                &:hover { color: #B2DFDB !important; }
+            }
+        
+            &.entertainment {
+                color: #FF5722 !important;
+                &:hover { color: #FFCCBC !important; }
+            }
+        
+            &.world {
+                color: #8BC34A !important;
+                &:hover { color: #DCEDC8 !important; }
+            }
+        
+            &.popular {
+                color: #2196F3 !important;
+                &:hover { color: #BBDEFB !important; }
+            }
+        }
+    
+        blockquote {
+            &.business { border-left: 5px solid #F44336; }
+            &.technology { border-left: 5px solid #607D8B; }
+            &.science { border-left: 5px solid #009688; }
+            &.entertainment { border-left: 5px solid #FF5722; }
+            &.world { border-left: 5px solid #8BC34A; }
+            &.popular { border-left: 5px solid #2196F3; }
+        }
+    }
+    
+    .article-media {
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+        margin-bottom: 24px;
+    
+        img {
+            width: 100%;
+        }
+    }
+}
+
+#spinner {
+    z-index: 999;
+    position: absolute;
+    top: 50%;
+    left: calc(50% + 150px);
+}
+
+// responsive layout media queries
+@media only screen and (min-width: 993px) {
+    .container {
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width : 992px) {
+    main { padding-left: 0; }
+
+    .side-nav {
+        top: 0;
+        z-index: 999;
+    }
+
+    nav { z-index: 500; }
+}

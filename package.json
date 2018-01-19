@@ -4,8 +4,9 @@
   "description": "",
   "main": "js/script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "gulp"
+    "build": "gulp",
+    "start": "python -m SimpleHTTPServer",
+    "prestart": "gulp"
   },
   "author": "harrisonlingren@gmail.com",
   "license": "MIT",
@@ -21,6 +22,7 @@
     "gulp-clean-css": "^3.9.0",
     "gulp-concat": "^2.6.1",
     "gulp-font2css": "^0.1.2",
+    "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.1",
     "gulp-uglify": "^3.0.0"
   }
